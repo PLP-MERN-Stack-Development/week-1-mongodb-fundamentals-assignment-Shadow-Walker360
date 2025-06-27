@@ -1,47 +1,62 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19861244&assignment_repo_type=AssignmentRepo)
-# MongoDB Fundamentals Assignment
+PLP Bookstore – MongoDB Project
+This project demonstrates the implementation of a bookstore database using MongoDB and Node.js. It covers the insertion of sample data and execution of various query operations, serving as a foundational exercise in database design, CRUD operations, and backend scripting.
 
-This assignment focuses on learning MongoDB fundamentals including setup, CRUD operations, advanced queries, aggregation pipelines, and indexing.
+Project Structure
 
-## Assignment Overview
+.
+├── insert_books.js    # Inserts predefined book documents into the database
+├── queries.js         # Executes find, update, and delete operations
+├── README.md          # Documentation and usage instructions
 
-You will:
-1. Set up a MongoDB database
-2. Perform basic CRUD operations
-3. Write advanced queries with filtering, projection, and sorting
-4. Create aggregation pipelines for data analysis
-5. Implement indexing for performance optimization
+Prerequisites
+To run this project, ensure you have the following installed:
+- Node.js: https://nodejs.org/en/download/
+- MongoDB Community Server: https://www.mongodb.com/try/download/community
+- A command-line interface (e.g., Command Prompt, PowerShell, or Terminal)
 
-## Getting Started
+The MongoDB daemon (mongod) must be running locally on your machine.
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Install MongoDB locally or set up a MongoDB Atlas account
-4. Run the provided `insert_books.js` script to populate your database
-5. Complete the tasks in the assignment document
+Installation
+1. Clone or Download the Project
+Navigate into the downloaded directory:
+cd plp-bookstore
+2. Install Dependencies
+Install the MongoDB Node.js driver:
+npm install mongodb
+Usage
+Step 1: Insert Book Data
+To populate the database with 10 book documents, run:
+node insert_books.js
+This will:
+- Connect to your local MongoDB instance
+- Create a database named plp_bookstore
+- Create a collection named books
+- Insert 10 structured book documents
 
-## Files Included
+Step 2: Execute Queries
+To perform various read, update, and delete operations, run:
+node queries.js
+This will:
+- Retrieve books by genre, year, and author
+- Update the price of a specific book
+- Delete a book by its title
 
-- `Week1-Assignment.md`: Detailed assignment instructions
-- `insert_books.js`: Script to populate your MongoDB database with sample book data
+Script Overview
+insert_books.js
+This script connects to MongoDB and inserts sample documents with the following fields:
+- title (String)
+- author (String)
+- genre (String)
+- published_year (Number)
+- price (Number)
+- in_stock (Boolean)
+- pages (Number)
+- publisher (String)
 
-## Requirements
+queries.js
+This script performs the following database operations:
+- Find documents by genre, publication year, or author
+- Update the price of a specific book
+- Delete a document using the book title
 
-- Node.js (v18 or higher)
-- MongoDB (local installation or Atlas account)
-- MongoDB Shell (mongosh) or MongoDB Compass
 
-## Submission
-
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
-
-1. Complete all tasks in the assignment
-2. Add your `queries.js` file with all required MongoDB queries
-3. Include a screenshot of your MongoDB database
-4. Update the README.md with your specific setup instructions
-
-## Resources
-
-- [MongoDB Documentation](https://docs.mongodb.com/)
-- [MongoDB University](https://university.mongodb.com/)
-- [MongoDB Node.js Driver](https://mongodb.github.io/node-mongodb-native/) 
